@@ -7,7 +7,7 @@ const Tasks = ({ tasks,setTasks }) => {
         head={"My Tasks"}
         quote={"Manage your tasks and track your progress."}
       />
-      <div className="grid grid-cols-2 w-full gap-5 mt-8">
+      <div className="grid md:grid-cols-1 w-full gap-5 mt-8 lg:grid-cols-2">
         {tasks.map((task) => (
           <TaskCardT key={task.id} task={task} setTasks={setTasks} />
         ))}

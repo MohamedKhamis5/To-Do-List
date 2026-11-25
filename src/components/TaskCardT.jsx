@@ -32,15 +32,15 @@ const TaskCardT = ({ task, setTasks }) => {
         <button
           className={
             !completed
-              ? "p-2 bg-indigo-600 text-white rounded-2xl font-semibold"
-              : "p-2 bg-orange-100 text-orange-600 rounded-2xl font-semibold"
+              ? "p-2 bg-indigo-600 text-white rounded-2xl font-semibold cursor-pointer"
+              : "p-2 bg-orange-100 text-orange-600 rounded-2xl font-semibold cursor-pointer"
           }
           onClick={handleToggle}
         >
           {completed ? "Pende" : "Complete"}
         </button>
         <button
-          className="p-2 bg-red-100 text-red-500 rounded-2xl font-semibold"
+          className="p-2 bg-red-100 text-red-500 rounded-2xl font-semibold cursor-pointer"
           onClick={handleDelete}
         >
           Delete

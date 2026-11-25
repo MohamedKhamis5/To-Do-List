@@ -67,14 +67,14 @@ const AddTask = (props) => {
         <div className="flex items-center justify-end gap-3 pt-2">
           <button
             type="button"
-            className="px-6 py-2.5 rounded-xl text-sm font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 transition-colors"
+            className="px-6 py-2.5 rounded-xl text-sm font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 transition-colors cursor-pointer"
             onClick={handleCancel}
           >
             Cancel
           </button>
           <button
             type="submit"
-            className="px-6 py-2.5 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 shadow-md shadow-indigo-200 transition-colors"
+            className="px-6 py-2.5 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 shadow-md shadow-indigo-200 transition-colors cursor-pointer"
             onClick={handleSave}
           >
             Save Task
