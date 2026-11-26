@@ -10,7 +10,7 @@ const Dashboard = ({tasks}) => {
         <Card title={"Total Tasks"} number={tasks.length} color={"blue"} />
         <Card title={"Completed"} number={tasks.filter((t)=>t.completed).length} color={"green"} />
         <Card title={"Pending"} number={tasks.filter((t)=>!t.completed).length} color={"orange"} />
-        <Card title={"Completion"} number={`${Math.round((((tasks.filter((t)=>t.completed).length)/tasks.length)*100))}%`} color={"purple"}>%</Card> 
+      <Card title={"Completion"} number={`${(tasks>0)?Math.round((((tasks.filter((t)=>t.completed).length)/tasks.length)*100)):0}%`} color={"purple"}>%</Card> 
       </div>
       <RecentTasks tasks={tasks}/>
     </div>

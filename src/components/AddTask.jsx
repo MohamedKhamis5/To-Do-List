@@ -12,13 +12,17 @@ const AddTask = (props) => {
   const handleSave = (e) => {
     e.preventDefault();
     if (!tit.trim()) return;
-    const newTask={
-        id:Math.random()*100,
-        title:tit,
-        description:des,
-        completed:false,
-    }
-    props.setTasks([...props.tasks,newTask])
+    const newTask = {
+      id: Math.random() * 100,
+      title: tit,
+      description: des,
+      completed: false,
+    };
+    const updatedTasks = [...props.tasks, newTask];
+
+    props.setTasks(updatedTasks);
+
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks));
     setTit("");
     setDes("");
   };
@@ -28,7 +32,7 @@ const AddTask = (props) => {
         head={"Add New Task"}
         quote={"Create a task and keep your work organized."}
       />
-      <div className="w-[70%]  bg-white border border-slate-100 rounded-2xl shadow-sm mx-auto mt-8 p-8 flex flex-col gap-6">
+      <div className="w-[90%] md:[70%]  bg-white border border-slate-100 rounded-2xl shadow-sm mx-auto mt-8 p-8 flex flex-col gap-6">
         <h1 className="text-xl font-bold text-slate-800 tracking-tight">
           Task information
         </h1>
